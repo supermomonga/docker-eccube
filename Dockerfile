@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:12.04
 MAINTAINER supermomonga
 
 RUN locale-gen en_US.UTF-8
@@ -6,7 +6,7 @@ RUN update-locale LANG=en_US.UTF-8
 env LC_ALL C
 env LC_ALL en_US.UTF-8
 
-# RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
+RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get -y upgrade
 
